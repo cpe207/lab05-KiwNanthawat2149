@@ -1,9 +1,22 @@
+import { constants } from "buffer";
+
 // define interface for Student object
-/* Your code here */
+interface Student{
+  name :string
+  score : number
+}
 
 // assign interface/type to the function definition properly
-function findTopNames(students) {
-  /* Your code here */
+function findTopNames(students:Student[]) {
+  const kang=students.filter((students:Student)=> students.score > 8) 
+
+  const kong=kang.map((students:Student)=>students.name)
+
+  return kong
+
+
+
+  
 }
 
 // assign interface/type to the student1 object properly
@@ -16,3 +29,4 @@ const students1 = [
 console.log(findTopNames(students1));
 
 module.exports = findTopNames;
+//Nanthawat Sirisuksumran 660612149 
